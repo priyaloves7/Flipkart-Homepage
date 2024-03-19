@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style1.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans&display=swap" rel="stylesheet">
+    <title>Css</title>
+</head>
+<body>
+    <h1 class="h1">CSS</h1>
+
+    <div>
+        <form name="myform" class="loginpage" onsubmit="return validateform()"  >
+            <h1 style="text-align: center;">Login</h1>
+            <div id="input">
+                <label for="Username"><b>Username:</b></label><br>
+                <input type="text" placeholder="Enter your Username" name="Username" id="Username"><br>
+            </div>
+            <div id="input">
+                <label for="password"><b>Password:</b></label><br>
+                <input type="password" placeholder="Enter your password" name="Password" id="Password"><br><br>
+            </div>
+            <div class="button1">
+                <input type="submit" value="Login" class="button">
+            </div>
+        </form>
+    </div> 
+    Enter your name: <input type="text" id="fname" onchange="upperCase()">
+
+<script>
+ function upperCase() {
+    const x = document.getElementById("fname");
+    x.value = x.value.toUpperCase();
+  }
+ 
+</script>
+
+    <script>
+        function validateform() {
+            let x = document.forms["myform"]["Username"].value;
+            if (x == "") {
+                alert("Enter your Username!");
+                return false;
+            }
+            let y = document.forms["myform"]["Password"].value;
+            if (y == "") {
+                alert("Enter your Password!");
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>
